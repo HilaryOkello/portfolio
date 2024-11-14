@@ -32,14 +32,14 @@ const projectData = [
   },
   {
     title: "Wget Mimic",
-    desc: "Description for Project 3",
+    desc: "wget is a command-line program written in Go that seeks to replicate the functionality of the free, open source tool, wget, used to retrieve content from web servers. It supports HTTP and HTTPS protocols.",
     img: "/static/wget-mimic.png",
     stack: "Vanilla Go, Docker",
     github: "https://github.com/HilaryOkello/dow"
   },
   {
     title: "Alpha-Beta: A Vaccine Tracking System",
-    desc: "Blockchain-based vaccine tracker",
+    desc: "This project is a platform designed to track the distribution and administration of vaccines from the manufacturer to the patient, leveraging blockchain for transparency and Go APIs for data integration and analytics. ",
     img: "/static/alpha-beta.png",
     stack: "<strong>Stack:</strong><br>Go, Javascript",
     github: "https://github.com/HilaryOkello/alpha-beta"
@@ -99,3 +99,24 @@ imagesContainer.addEventListener('touchend', (e) => {
 });
 
 updateCarousel();
+
+// Array of logo file paths
+const logos = [
+  'static/go.svg',
+  'static/javascript.svg',
+  'static/docker.svg',
+  'static/mysql.svg',
+  'static/php.png',
+  'static/git.svg',
+  'static/vscode.svg',
+  
+];
+
+const skillsLogoContainer = document.querySelector('.skills-logo');
+
+logos.forEach(logoPath => {
+    const img = document.createElement('img');
+    img.src = logoPath;
+    img.alt = 'Programming Language Logo';
+    skillsLogoContainer.appendChild(img);
+});
