@@ -1,49 +1,48 @@
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+let next = document.getElementById("next");
+let previous = document.getElementById("previous");
+let coroImages = document.getElementsByClassName("corousel_Img");
+let positioLog = document.getElementsByClassName("counter");
+let projectTitle = document.getElementById("project_title");
+let projectDesc = document.getElementById("project_desc");
+let clickCount = 0;
 
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active')
-})
+const projectData = [
+  { title: "ATM Management System", desc: "atm-management-system is a console-based application written in C that allows users to manage their accounts through functionalities such as account creation, updating account details, checking account information, making transactions, and transferring account ownership.", stack: "C, makefile, CLI app", feat: "User Registration & Login\nAccount Creation & Updates\nView Account Details\nList User Accounts\nDeposit & Withdraw Funds\nDelete Account\nTransfer Account Ownership", github: "" },
+  { title: "Bandify", desc: "Description for Project 2 goes here." },
+  { title: "Wget Mimic", desc: "Description for Project 3 goes here." },
+  { title: "Alpha-Beta", desc: "Description for Project 4 goes here." }
+];
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize variables
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const total = carouselItems.length;
-    let current = 0;
-  
-    // Set the first item as active
-    carouselItems[current].classList.add('active');
-  
-    // Get the move buttons
-    const moveRightButton = document.getElementById('moveRight');
-    const moveLeftButton = document.getElementById('moveLeft');
-  
-    // Move right on next button click
-    moveRightButton.addEventListener('click', function() {
-      const next = (current + 1) % total; // Loop back to the first slide if we're at the last one
-      setSlide(current, next);
-      current = next;
-    });
-  
-    // Move left on previous button click
-    moveLeftButton.addEventListener('click', function() {
-      const prev = (current - 1 + total) % total; // Loop back to the last slide if we're at the first one
-      setSlide(current, prev);
-      current = prev;
-    });
-  
-    // Function to handle slide switching
-    function setSlide(prev, next) {
-      // Remove 'active' class from the previous item
-      carouselItems[prev].classList.remove('active');
-      
-      // Add 'active' class to the next item
-      carouselItems[next].classList.add('active');
-      
-      // Log the current slide index for debugging
-      console.log('current: ' + current);
-      console.log('prev: ' + prev);
-      console.log('next: ' + next);
-    }
-  });
-  
+function updateCarousel() {
+  // Update images
+  for (let i = 0; i < coroImages.length; i++) {
+    coroImages[i].classList.remove("active");
+  }
+  coroImages[clickCount].classList.add("active");
+
+  // Update project details
+  projectTitle.innerText = projectData[clickCount].title;
+  projectDesc.innerText = projectData[clickCount].desc;
+  for (let i = 0; i < positioLog.length; i++) {
+    positioLog[i].innerHTML = "○";
+  }
+  positioLog[clickCount].innerHTML = "●";
+}
+
+next.onclick = () => {
+  clickCount = (clickCount + 1) % coroImages.length;
+  updateCarousel();
+};
+
+previous.onclick = () => {
+  clickCount = (clickCount - 1 + coroImages.length) % coroImages.length;
+  updateCarousel();
+};
+
+// Initialize the carousel with the first image and project details
+updateCarousel();
+
+// setInterval(() => {
+//   clickCount = (clickCount + 1) % coroImages.length;
+//   updateCarousel();
+// }, 6000);

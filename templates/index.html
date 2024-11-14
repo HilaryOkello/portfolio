@@ -2,120 +2,146 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hilary Okello</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/static/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hilary Okello</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+  <script src="https://kit.fontawesome.com/e3d464afcc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="brand-title">HILARY OKELLO</div>
-            <a href="#" class="toggle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+  <header>
+    <nav class="navbar">
+      <a class="brand-title">HILARY OKELLO</a>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#">01/PROJECTS</a></li>
+          <li><a href="#">02/ABOUT</a></li>
+          <li><a href="#">03/CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="cta-container">
+      <div class="cta-text-div">
+        <h2 class="cta-text-real">Hey, ✋!<br>
+          I'm <strong>HILARY OKELLO,</strong><br>
+          a <strong>Software Developer</strong> based in Kisumu, Kenya.<br></h2>
+        <p class="cta-text-sub"> Golang and JavaScript are my primary 🧰 for building robust solutions and tackling
+          challenges head-on.
+          Creativity is my secret weapon. Let's connect and create something impactful!"</p>
+        <a href="#contact" class="main-button mr-2">Get In Touch</a>
+      </div>
+      <div class="cta-image">
+        <div class="cta-image-div" style="background-image: url('/static/profile.png'); background-size: cover;">
+        </div>
+      </div>
+    </div>
+    <div class="projects">
+      <div class="projects-intro">
+        <p class="section-intro">SELECTED<br>PROJECTS</p>
+        <div class="delimiter"></div>
+        <p class="section-num">01/03</p>
+      </div>
+      <div class="corousel_holder">
+        <div id="previous">
+          <i class="fa-solid fa-less-than"></i>
+        </div>
+        <div id="images">
+          <img class="corousel_Img active"
+            src="https://images.unsplash.com/photo-1610875581241-200212df014f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+            alt="img1">
+          <img class="corousel_Img"
+            src="https://images.unsplash.com/photo-1622448469111-9627e13ebad2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80"
+            alt="img2">
+          <img class="corousel_Img"
+            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+            alt="img3">
+          <img class="corousel_Img"
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80"
+            alt="img4">
+        </div>
+        <div class="project-details">
+          <div id="project_details" class="details">
+            <h2 id="project_title"></h2>
+            <p id="project_desc"></p>
+            <p id="project_stack"><strong>features:</strong></p>
+            <p id="project_stack"><strong>stack:</strong></p>
+            <a id="project-link" href=""><strong>GitHub Link
+                <i class="fi fi-bs-arrow-up-right"></strong></i>
             </a>
-            <div class="navbar-links">
-                <ul>
-                    <li><a href="#">01/PROJECTS</a></li>
-                    <li><a href="#">02/ABOUT</a></li>
-                    <li><a href="#">03/CONTACT</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="intro">
-            <div class="intro-message"></div>
-            <div class="intro-img"></div>
+          </div>
         </div>
-        <div class="carousel">
-  <div class="carousel__nav">
-   <span id="moveLeft" class="carousel__arrow">
-        <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
-    <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
-</svg>
-    </span>
-    <span id="moveRight" class="carousel__arrow" >
-      <svg class="carousel__icon"  width="24" height="24" viewBox="0 0 24 24">
-  <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-</svg>    
-    </span>
-  </div>
-  <div class="carousel-item carousel-item--1">
-    <div class="carousel-item__image"></div>
-    <div class="carousel-item__info">
-      <div class="carousel-item__container">
-      <h2 class="carousel-item__subtitle">The grand moment </h2>
-      <h1 class="carousel-item__title">Le tour</h1>
-      <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-      <a href="#" class="carousel-item__btn">Explore the tour</a>
+        <div id="next">
+          <i class="fa-solid fa-greater-than"></i>
         </div>
+      </div>
+      <div id="corouselPoition">
+        <span class="counter">●</span>
+        <span class="counter">○</span>
+        <span class="counter">○</span>
+        <span class="counter">○</span>
+      </div>
     </div>
-  </div>
-  <div class="carousel-item carousel-item--2">
-    <div class="carousel-item__image"></div>
-    <div class="carousel-item__info">
-      <div class="carousel-item__container">
-      <h2 class="carousel-item__subtitle">The big window </h2>
-      <h1 class="carousel-item__title">Minimal window</h1>
-      <p class="carousel-item__description">Clear Glass Window With Brown and White Wooden Frame iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-      <a href="#" class="carousel-item__btn">Read the article</a>
+    <div class="about">
+      <div class="about-intro">
+        <p class="section-intro">ABOUT</p>
+        <div class="delimiter"></div>
+        <p class="section-num">02/03</p>
+      </div>
+      <div class="about-container">
+        <div class="about-text">
+          <P class="about-par">Hi, Again! I’m a web developer based in Kisumu, Kenya, with expertise in Golang and
+            JavaScript.</P>
+
+          <p>Currently, I’m working as an Apprentice Software Developer at Zone 01 Kisumu, where I focus on writing
+            secure, efficient code in Go and JavaScript, as well as adhering to best practices and unit
+            testing.</p>
+
+          <p>Learning is a life-long process and and I'm always pushing myself to stay up to date with the latest
+            trends in tech. I’m a strong believer in the power of creativity, teamwork, and
+            maintaining a dynamism that fuels both personal and professional growth. If you're looking for someone with
+            a versatile skill set and a passion for coding, I’d love to connect!</p>
+
+          <p>Outside of coding, I’m an avid fan of TV shows, gardening, and exploring the culinary arts.</p>
+
+          <a href="#contact" class="main-button mr-3">Resume</a>
         </div>
+        <div class="about-img">
+          <img src="/static/about.png" alt="a profile photo of Hilary Okello" class="about-image">
+        </div>
+      </div>
+      <div class="skills-intro">
+        <p class="skills-title">SKILLS</p>
+        <div class="delimiter"></div>
+        <div class="skills-logo">
+          <img src=" alt="" class="skills-image">
+        </div>
+      </div>
     </div>
-  </div>
-    <div class="carousel-item carousel-item--3">
-    <div class="carousel-item__image"></div>
-    <div class="carousel-item__info">
-      <div class="carousel-item__container">
-      <h2 class="carousel-item__subtitle">Tropical palms </h2>
-      <h1 class="carousel-item__title">Palms</h1>
-      <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-      <a href="#" class="carousel-item__btn">Explore the palms</a>
-        </div>
+    <div class="contact" id="contact">
+      <div class="contact-intro">
+        <p class="section-intro">CONTACT</p>
+        <div class="delimiter"></div>
+        <p class="section-num">03/03</p>
+      </div>
     </div>
-  </div>
-  
-   <div class="carousel-item carousel-item--4">
-    <div class="carousel-item__image"></div>
-    <div class="carousel-item__info">
-      <div class="carousel-item__container">
-      <h2 class="carousel-item__subtitle">Beach </h2>
-      <h1 class="carousel-item__title">The beach </h1>
-      <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-      <a href="#" class="carousel-item__btn">Explore the beach</a>
-        </div>
-    </div>
-  </div>
-  
- <div class="carousel-item carousel-item--5">
-    <div class="carousel-item__image"></div>
-    <div class="carousel-item__info">
-      <div class="carousel-item__container">
-      <h2 class="carousel-item__subtitle">The white building </h2>
-      <h1 class="carousel-item__title">White building</h1>
-      <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-      <a href="#" class="carousel-item__btn">Read the article</a>
-        </div>
-    </div>
-  </div>
-  
-</div>
-        <div class="about">
-            <div></div>
-            <div></div>
-        </div>
-    </main>
-    <footer>
-    </footer>
-    <script src="/static/app.js"></script>
+  </main>
+  <footer>
+  </footer>
+  <script src="/static/app.js"></script>
 </body>
 
 </html>
