@@ -42,14 +42,14 @@ const projectData = [
   },
   {
     title: "Wget Mimic",
-    desc: "wget is a command-line program written in Go that seeks to replicate the functionality of the free, open source tool, wget, used to retrieve content from web servers. It supports HTTP and HTTPS protocols.",
+    desc: "Wget mimic is a CLI program written in Go that seeks to replicate the functionality of the free, open source tool, wget, used to retrieve content from web servers. It supports HTTP and HTTPS protocols. This project was a collaboration of four contributors",
     img: "/static/wget-mimic.png",
     stack: "Vanilla Go, Docker",
-    github: "https://github.com/HilaryOkello/dow"
+    github: "https://github.com/andyosyndoh/Downloader/"
   },
   {
     title: "Alpha-Beta: A Vaccine Tracking System",
-    desc: "This project is a platform designed to track the distribution and administration of vaccines from the manufacturer to the patient, leveraging blockchain for transparency and Go APIs for data integration and analytics. ",
+    desc: "Working in a team of 5, Alpha-Beta was birthed in Zone 01 Kisumu's Blockchain Hackathon. It is a platform designed to track the distribution and administration of vaccines from the manufacturer to the patient. We leveraged blockchain for transparency and Go APIs for data integration and analytics. ",
     img: "/static/alpha-beta.png",
     stack: "<strong>Stack:</strong><br>Go, Javascript",
     github: "https://github.com/HilaryOkello/alpha-beta"
