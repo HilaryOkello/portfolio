@@ -14,6 +14,7 @@ import (
 func homeHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
 		log.Printf("Method not allowed")
+		errorPage(w, http.StatusMethodNotAllowed)
 		return
 	}
 	if r.URL.Path != "/" {
@@ -113,6 +114,6 @@ func main() {
 	http.HandleFunc("/", homeHandler)
 	log.Println("Success. Server listening on port 8000")
 	if err := http.ListenAndServe(":8000", nil); err != nil {
-		log.Println("Failed to start server")
+		log.Fatalln("Failed to start server")
 	}
 }
