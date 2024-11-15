@@ -1,9 +1,18 @@
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+const menuLinks = document.querySelectorAll('.navbar-links ul li a');
 
-toggleButton.addEventListener('click', () => {
+toggleButton.addEventListener('click', (event) => {
+  event.preventDefault();
   navbarLinks.classList.toggle('active')
 })
+
+// Close the menu when any link is clicked (only on mobile)
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navbarLinks.classList.remove('active');
+  });
+});
 
 let next = document.getElementById("next");
 let previous = document.getElementById("previous");
@@ -13,6 +22,7 @@ let projectTitle = document.getElementById("project_title");
 let projectDesc = document.getElementById("project_desc");
 let projectStack = document.getElementById("project_stack");
 let projectLink = document.getElementById("project_link");
+let projectCorousel = document.getElementsByClassName("corousel_holder")
 let clickCount = 0;
 
 const projectData = [
@@ -81,11 +91,11 @@ previous.onclick = () => {
 // Swipe functionality for mobile
 let startX = 0;
 
-imagesContainer.addEventListener('touchstart', (e) => {
+projectCorousel[0].addEventListener('touchstart', (e) => {
   startX = e.touches[0].clientX;
 });
 
-imagesContainer.addEventListener('touchend', (e) => {
+projectCorousel[0].addEventListener('touchend', (e) => {
   const endX = e.changedTouches[0].clientX;
   const diffX = startX - endX;
 
@@ -109,14 +119,14 @@ const logos = [
   'static/php.png',
   'static/git.svg',
   'static/vscode.svg',
-  
+
 ];
 
 const skillsLogoContainer = document.querySelector('.skills-logo');
 
 logos.forEach(logoPath => {
-    const img = document.createElement('img');
-    img.src = logoPath;
-    img.alt = 'Programming Language Logo';
-    skillsLogoContainer.appendChild(img);
+  const img = document.createElement('img');
+  img.src = logoPath;
+  img.alt = 'Programming Language Logo';
+  skillsLogoContainer.appendChild(img);
 });
