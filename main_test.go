@@ -12,16 +12,16 @@ import (
 func TestHomeHandler(t *testing.T) {
 
 	tests := []struct {
-		name          string
-		method        string
-		path          string
-		expectedCode  int
+		name         string
+		method       string
+		path         string
+		expectedCode int
 	}{
 		{
-			name:          "Valid GET request",
-			method:        http.MethodGet,
-			path:          "/",
-			expectedCode:  http.StatusOK,
+			name:         "Valid GET request",
+			method:       http.MethodGet,
+			path:         "/",
+			expectedCode: http.StatusOK,
 		},
 		{
 			name:         "Wrong method",

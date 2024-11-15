@@ -11,6 +11,7 @@ import (
 	"text/template"
 )
 
+// homeHandler is the main handler for the portfolio home page
 func homeHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
 		log.Printf("Method not allowed")
@@ -29,6 +30,7 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 	templ.Execute(w, nil)
 }
 
+// serveStatic is a handler function to serve static files in the given directory.
 func serveStatic(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
 		errorPage(w, http.StatusMethodNotAllowed)
@@ -83,10 +85,10 @@ func errorPage(w http.ResponseWriter, code int) {
 	default:
 		message = "Internal Server Error"
 	}
-	data := struct{
+	data := struct {
 		Title   string
-        Status  int
-        Message string
+		Status  int
+		Message string
 	}{
 		Title:   "Error",
 		Status:  code,
