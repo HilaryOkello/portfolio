@@ -1,6 +1,7 @@
 # Portfolio Web App
 
 This project is a personal portfolio web application showcasing my journey in software development so far using only vanilla Go and some JavaScript for dynamic interactions on the front-end. It is built using Go for the backend server and vanilla JavaScript. I then dockerize the application and hosted it on Render. You can view the live portfolio [here](https://portfolio-7eww.onrender.com).
+I also added my custom domain onyangookello.com
 
 ## Tech Stack:
 Backend: Go
